@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include ("../partials/head") %>
+
+<body>
+    <div class="body2">
+
+        <%- include ("../partials/header2") %>
+        
+        <h1>Modificar crédito</h1>
+        <!-- <p class="fecha">fecha: 00/00/00</p> -->
+        <form action="/creditos/actualizar/<%= credito.id %>?_method=PUT" method="POST" class="formulario" id="formulario">
+            <section class="inputs">
+                <input name="fecha" type="text" placeholder="Fecha" value="<%= credito.fecha %>">
+                <input name="localidad" type="text" placeholder="Localidad" value="<%= credito.localidad %>">
+                <input name="nombre" type="text" placeholder="Nombre" value="<%= credito.nombre %>">
+                <input name="cargo" type="text" placeholder="Cargo" value="<%= credito.cargo %>">
+                <textarea name="descripcion" placeholder="Descripción" cols="30" rows="10">
+                    <%= credito.descripcion %>
+                </textarea>
+                <select name="programa" id="programa" class="select">
+                    <option value="1">Informe 4</option>
+                    <option value="2">Tal Cual</option>
+                    <option value="3">Vivo el Jueves</option>
+                </select>
+                
+                <button  type="submit">Guardar</button>
+            </section>
+
+        </form>
+    </div>
+</body>

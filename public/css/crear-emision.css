@@ -1,0 +1,138 @@
+:root {
+
+    --gris-medio:#8C8C8C;
+    --gris-claro:#F3F3F3;
+    --dark:#120E21;
+    --red:#F20C36;
+    --secu-red:#EB3349;
+    --light-red:#FBEEFF;
+
+}
+* {
+    box-sizing: border-box;
+    
+
+}
+body {
+    /* background-color: #FAF9FE; */
+    font-family: 'Red Hat Display';
+    
+}
+
+.body2 {
+    background-color: #FAF9FE;
+
+    min-width: 375px;
+    max-width: 375px;
+    margin: auto;
+}
+
+header {
+    
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top:20px;
+}
+
+header img{
+    width: 16px;
+    height: 15px;
+    margin-left:24px;
+}
+
+header p{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 10px;
+    color:var(--gris-medio)
+}
+
+h1 {
+    margin-left: 24px;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 46px;
+    color: var(--dark)
+}
+
+.select {
+    
+    
+    width:343px;
+    height: 56px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 8px;
+    /* border: none; */
+    background-color: var(--light-red);
+    text-indent: 10px;
+    color:var(--dark)
+
+    /* -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none; */
+}
+
+/* option {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+} */
+
+.fecha {
+    margin-top: 30px;
+}
+
+.fecha label {
+    
+    height: 26px;
+    width: 57px;
+
+    margin: 20px;
+
+}
+
+.guardar {
+
+    background: #EB3349;
+    display: block;
+    height: 54px;
+    width: 263px;
+    border-radius: 60px;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--gris-claro);
+
+}
+
+.emision-creada {
+    border: rgb(91, 218, 133) 4px solid;
+    
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    margin-top: 70px;
+}
+
+.emision-creada h3 {
+    
+
+    margin: 0px;
+    padding-left: 10px ;
+}
+
+.emision-creada p {
+    
+
+    margin: 0px;
+    padding-left: 10px ;
+}

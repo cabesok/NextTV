@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include ("../partials/head") %>
+
+<body>
+    <div class="body2">
+        
+        <%- include ("../partials/header2") %>
+        
+        <h1>Crear emisión</h1>
+
+        <form action="/emisiones/nuevaemision" method="post" >
+
+            <select name="programa" id="programa" class="select">
+                <option value="1">Informe 4</option>
+                <option value="2">Tal Cual</option>
+                <option value="3">Vivo el Jueves</option>
+            </select>
+            <div class="fecha">
+                <label for="fecha"> Fecha: </label>
+                <input type="date" id="fecha" name="fecha">
+            </div>
+            <button type="submit" class="guardar"> Guardar </button>
+
+            <div class="emision-creada">
+                <h3> Informe 4 </h3>
+                <p> Haz creado una nueva emisión </p>
+            </div>
+
+        </form>
+    </div>

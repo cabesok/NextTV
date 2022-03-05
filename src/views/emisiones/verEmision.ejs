@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include ("../partials/head") %>
+
+<body>
+    <div class="body2">
+        
+
+        <%- include ("../partials/header2") %>
+
+        <h1>Emision</h1>
+
+        <fieldset class="campo-emision">
+            <div class="primer-fila">
+                <h3><%= emision.programa.programa %></h3>
+                <!-- <input type="radio" style="color:#8C8C8C" checked> -->
+            </div>
+            <p><%= emision.fecha %></p>
+            
+        </fieldset>
+
+        <section class="lista-creditos">
+
+            <% for (let i = 0; i < creditos.length; i++) { %>
+                
+                <article class="credito">
+        
+                    <div class="cabecera dark">
+                        <div class="nombre"> <%= creditos[i].nombre %> </div>
+                        <div class="right gris-medio"> <%=creditos[i].fecha %> </div>
+                        <div class="cargo"> <%=creditos[i].cargo %> </div>
+                        <div class="right"> <%=creditos[i].localidad %> </div>
+                    </div>
+                    <p class="descripcion gris-medio"> <%=creditos[i].descripcion %> </p>
+                    
+                    <!-- <div class="botones">
+                        <form action="/creditos/utilizar/<%=creditos[i].id %>?_method=PUT" method="POST">
+                            <a href="/creditos/utilizar/<%=creditos[i].id %>"><button type="button" class="principal">Utilizar</button></a>
+                        </form>    
+                        <button type="button" class="secundario"> <a href="/creditos/modificarcredito/<%= creditos[i].id %>"> Modificar </a> </button>
+                        <form action="/creditos/delete/<%=creditos[i].id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="delete"><i class="fas fa-trash-alt"></i></button>
+                        </form>
+                    </div> -->
+        
+                </article>
+                
+            <% } %>
+        
+        </section>
+
+        <form action="/emisiones/publicar/<%= emision.id %>?_method=PUT" method="POST">
+            <button type="submit" class="publicar">Publicar</button>
+        </form>
+        <form action="/creditos/nopublicar/<%= emision.id %>?_method=PUT" method="POST">
+            <button type="submit" class="publicar">Descartar</button>
+        </form>
+
+    </div>
+</body>

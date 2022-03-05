@@ -1,0 +1,132 @@
+:root {
+
+    --gris-medio:#8C8C8C;
+    --gris-claro:#F3F3F3;
+    --dark:#120E21;
+    --red:#F20C36;
+    --secu-red:#EB3349;
+    --light-red:#FBEEFF;
+
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Red Hat Display';
+
+}
+body {
+    background-color: #FAF9FE;
+}
+
+.body2 {
+    min-width: 375px;
+    max-width: 450px;
+    margin: auto;
+}
+
+header {
+
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* margin-top:20px; */
+}
+
+header img{
+    width: 16px;
+    height: 15px;
+    margin-left:24px;
+}
+header p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 10px;
+    color:var(--gris-medio)
+}
+
+h1 {
+
+
+padding-left:7%;
+/* margin-left: 24px; */
+font-weight: 900;
+font-size: 35px;
+line-height: 46px;
+color: var(--dark)
+
+}
+
+.fecha {
+
+
+
+padding-left:7%;
+color: var(--gris-medio);
+font-weight: 500;
+font-size: 12.8px;
+line-height: 160%;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+height:600px;
+margin-left: auto;
+margin-right: auto;
+}
+input {
+    margin-top:10px;
+    margin-bottom: 12px;
+    height: 56px;
+    border-radius: 7px;
+    border:none;
+    text-indent: 15px;
+    background-color: var(--light-red);
+    font-weight: 500;
+font-size: 16px;
+line-height: 21px;
+color:var(--gris-medio)
+}
+textarea {
+    margin-top:10px;
+    margin-bottom: 12px;
+    height: 160px;
+    border-radius: 7px;
+    border:none;
+    background-color: var(--light-red);
+    font-weight: 500;
+font-size: 16px;
+line-height: 21px;
+color:var(--gris-medio);
+text-indent: 15px;
+}
+
+select {
+    margin-top:10px;
+    margin-bottom: 12px;
+    height: 56px;
+    border-radius: 7px;
+    border:none;
+    text-indent: 15px;
+    background-color: var(--light-red);
+    font-weight: 500;
+font-size: 16px;
+line-height: 21px;
+color:var(--gris-medio)
+}
+
+button {
+    width: 263px;
+    height: 54px;
+    border-radius: 50px;
+    border:none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:30px;
+    background-color: var(--secu-red);
+    color:white;
+    font-weight: 500;
+font-size: 16px;
+line-height: 21px;
+}

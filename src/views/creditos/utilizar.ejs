@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include ("../partials/head") %>
+    
+<body>
+    <div class="body2">
+    
+    <%- include ("../partials/header2") %>
+
+    <h1>Utilizar</h1>
+
+    
+<div class="credito">
+    <div class="container">
+        <div class="cabecera">
+            <p><%=credito.fecha %></p>
+            <p><%=credito.localidad %></p>
+        </div>
+        <div class="contenido">
+            <h3 style="margin: 0px;"><%= credito.nombre %></h3>
+            <h4 style="margin: 0px;"><%=credito.cargo %></h4>
+            <p class="descripcion" tyle="margin: 0px;"><%=credito.descripcion %></p>
+        </div>
+    </div>
+</div>
+        <form action="/creditos/utilizar/<%= credito.id %>?_method=PUT" method="POST">
+                <div class="emisiones">
+                    
+                    <h2 style="margin: 24px;">Emisiones disponibles</h2>
+
+                    <% for (let i = 0; i < emisiones.length; i++) { %>
+        
+                        <div class="container-emision">
+                        <h4 style="margin: 0px;"> <%= emisiones[i].programa %> </h4>
+                            <div class="fechainput">
+                                <p style="margin: 0px;"> <%= emisiones[i].fecha %> </p>
+                                <input name="numeroEmision" value="<%= emisiones[i].id %>" type="radio" style="color:#8C8C8C" >
+                            </div>
+                        </div>
+
+                    <% } %>
+
+                </div>
+                <div class="bloques">
+                    <h5>Bloque:</h5>
+                    <input name="bloque" type="number">
+                    <h5>Posicion:</h5>
+                    <input name="posicion" type="number">
+                </div>
+
+                <button type="submit">Guardar</button>
+        </form>            
+
+    </div>
+</body>

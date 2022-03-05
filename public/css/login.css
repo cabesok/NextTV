@@ -1,0 +1,92 @@
+:root {
+
+    --gris-medio:#8C8C8C;
+    --gris-claro:#F3F3F3;
+    --dark:#120E21;
+    --red:#F20C36;
+    --secu-red:#EB3349;
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Red Hat Display';
+
+
+}
+body {
+
+    background-image: url(/public/images/fondologin.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+.logo {
+width: 250px;
+height: 99px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 90px;
+}
+
+.container {
+width: 300px;
+height: 315px;
+background-color: #FFFFFF;
+border-radius: 10px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 90px;
+}
+
+.titulo {
+font-size: 25px;
+line-height: 33px;
+position: relative;
+color: var(--dark);
+left: 28%;
+right: 28.48%;
+top: 9.78%;
+bottom: 78.86%;
+}
+
+.inputs {
+display: flex;
+flex-direction: column;
+width: 270px;
+height: 180px;
+justify-content: space-between;
+position: relative;
+top:60px;
+margin-left: auto;
+margin-right: auto;
+}
+.formulario-input {
+width: 270px;
+height: 46px;
+background-color: #FFFFFF;
+border:solid 2px;
+border-color:#8C8C8C;
+border-radius: 10px;
+font-size: 15px;
+line-height: 18px;
+color:#8C8C8C;
+text-indent: 10px;
+}
+
+
+button {
+    width: 190px;
+    height: 48px;
+    border:none;
+    background: #EB3349;
+    border-radius: 60px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    color:#FFFFFF;
+    font-weight: 500;
+}

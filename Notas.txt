@@ -1,0 +1,29 @@
+
+VISTAS FALTA:
+
+LOGIN
+CREDITOS RECIENTES (emision creada y publicada)
+CREAR ***
+NUEVO CREDITO
+MODIFICAR CREDITO
+BUSCAR ***
+UTILIZAR
+CREAR EMISION
+EMISIONES *** (solo falta lo de las emisiones al final)
+
+
+FUNCIONALIDADES PARA AGREGAR:
+
+*FILTRAR CREDITOS POR PROGRAMAS (JS front o vistas?)
+*cartelistos en CREDITOS para avisar que hay emisiones SIN PUBLICAR
+*BUSQUEDA (FILTRO POR FECHA ver)
+
+
+cuando NO se publique una emision y se elimine el estado de los CREDITOS pasa a sin utilizar (1)
+
+
+REVISAR:
+
+verEmision.ejs
+
+el envio de formularios. Anda el cambio de estados en creditos pero NO en Emision
