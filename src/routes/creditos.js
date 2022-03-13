@@ -4,7 +4,8 @@ const multer = require("multer");
 //const path = require("path");
 const router = express.Router();
 /* const product = require("../controllers/product"); */
-const creditosController = require("../controllers_db/creditosController")
+const creditosController = require("../controllers_db/creditosController");
+const authOk = require("../middlewares/authOk");
 
 
 /* var storage = multer.diskStorage({
@@ -24,14 +25,14 @@ const upload = multer({storage: storage}); */
 
 // Rutas para base da datos SQL
 
-router.get("/creditos", creditosController.creditos); 
+router.get("/creditos", authOk, creditosController.creditos); 
 /* router.get("/creditos/crear-emision", creditosController.crearEmision); */
-router.get("/creditos/buscar", creditosController.buscar);
+router.get("/creditos/buscar", authOk, creditosController.buscar);
 /* router.get("/creditos/emisiones", creditosController.emisiones); */
-router.get("/creditos/login", creditosController.login);
-router.get("/creditos/nuevocredito", creditosController.nuevocredito);
-router.get("/creditos/utilizar/:id", creditosController.utilizar);
-router.get("/creditos/modificarcredito/:id", creditosController.modificarcredito);
+/* router.get("/creditos/login", authOk, creditosController.login); */
+router.get("/creditos/nuevocredito", authOk, creditosController.nuevocredito);
+router.get("/creditos/utilizar/:id", authOk, creditosController.utilizar);
+router.get("/creditos/modificarcredito/:id", authOk, creditosController.modificarcredito);
 
 //router.get("/creditos/edit/:id", creditosController.edit);
 

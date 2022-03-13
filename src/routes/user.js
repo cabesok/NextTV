@@ -11,12 +11,12 @@ const userController = require("../controllers_db/userController");
 
 
 
-router.get("user/login", userController.login);    
+router.get("/user/login", userController.login);    
 //router.get("/register", guestMiddleware, userController.register);  
 //router.get("/userDetail/:id?", authMiddleware, userController.userDetail);
 //router.get("/userEdit/:id", authMiddleware, userController.userEdit); 
 
-router.post("user/login", userController.access);
+router.post("/user/login", userController.access);
 //router.post("/save",  upload.single("image"), userRegisterMiddleware ,userController.save);
 //router.put("/edit/:id", upload.single("image"), userController.edit);
 //router.post("/logout", userController.logout);

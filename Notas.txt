@@ -4,8 +4,8 @@ VISTAS FALTA:
 LOGIN
 CREDITOS RECIENTES (emision creada y publicada)
 CREAR ***
-NUEVO CREDITO
-MODIFICAR CREDITO
+NUEVO CREDITO ***
+MODIFICAR CREDITO ***
 BUSCAR ***
 UTILIZAR
 CREAR EMISION
@@ -26,4 +26,22 @@ REVISAR:
 
 verEmision.ejs
 
-el envio de formularios. Anda el cambio de estados en creditos pero NO en Emision
+
+
+--- 5/3 ---
+
+hacer USER ***
+
+hacer VALIDACION DE DATOS  con Express-Validator
+
+password nexttv  $2a$10$fV9yGTHWWzYovjnn.j9ZquIrzqNNC6t/8xYESaxDQV.SvJSp79uyq      sal 10
+
+
+VER: Como FILTRAR elementos por Categorías con HTML, CSS y JS
+     https://codepen.io/JyGProyectosWeb/pen/qbwjyP
+
+
+.activado input[type=radio]:checked + label { color: red;}
+
+.escondido input[type=radio]{ position: absolute;left: -1000em; }
+.escondido input[type=radio]:checked + label { color: red;}

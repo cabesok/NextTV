@@ -1,39 +1,55 @@
 let db = require("../database/models");
 let bcrypt = require("bcryptjs");
-const {validationResult} = require("express-validator");
+//const {validationResult} = require("express-validator");
 
 module.exports = {
 
-    login: (req, res) => res.render("../views/creditos/login.ejs", {style: "login.css", title: "Login"}),
+    login: (req, res) => res.render("../views/user/login.ejs", {style: "login.css", title: "Login"}),
 
     
     
     access: async function (req, res){
         
-        /* const errors = validationResult(req); */
+        let usuario = "nexttv";
+        let password = "$2a$10$fV9yGTHWWzYovjnn.j9ZquIrzqNNC6t/8xYESaxDQV.SvJSp79uyq";
+        /* let password = "nexttv"; */
+
+        if (usuario == req.body.usuario && /* password == req.body.password */ bcrypt.compareSync(req.body.password, password)){
+            req.session.userLogged = true;
+                 res.redirect("/creditos")
+        } else {
+             res.render("/user/login", {style: "login.css", title: "User | Login"});
+            
+        }
+    },
+
+    /* access: async function (req, res){
+        
+        
+        const errors = validationResult(req);
         
         let userToLogin = await 
         db.Users.findOne({where: {
             user_name: req.body.user_name
-            /* email: req.body.email */
+            
         }});
         
         
         if (userToLogin){
             let PasswordOk = bcrypt.compareSync(req.body.password, userToLogin.password);
             if (PasswordOk){
-                /* delete userToLogin.password; */
+                
                 req.session.userLogged = userToLogin;
                 return res.redirect("/")
-                /* return res.render("/user/userDetail") */
+                
             }
             
             
         } else {
             return res.render("user/login", {style: "login.css", title: "User | Login"});
-            /* return res.render("login", {errors: {email:{msg: "No se encuentra el email en la base de datos"}}}); */
+            
         }
-    },
+    }, */
     
     /* register: (req, res) => res.render("users/register", {style: "register.css", title: "User | Register"}),
 

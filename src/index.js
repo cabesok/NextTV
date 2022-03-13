@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const methodOverride = require('method-override');
 const app = express();
-//const session = require("express-session");
+const session = require("express-session");
 //const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 //const cors = require("cors")
 const bodyParser = require('body-parser');
@@ -26,7 +26,7 @@ app.use(methodOverride("_method"));
 
 
 //app.use(cors());
-//app.use(session({secret: "Secreto", resave: false, saveUninitialized: false}));
+app.use(session({secret: "Secreto", resave: false, saveUninitialized: false}));
 //app.use(userLoggedMiddleware);
 
 
@@ -38,12 +38,13 @@ app.use(/* "/creditos", */ creditos);
 const emisiones = require("./routes/emisiones");
 app.use(emisiones);
 
+const user = require("./routes/user");
+app.use(user);
+
 /* const home = require("./routes/home");
 app.use(home); */
 
 
-/* const user = require("./routes/user");
-app.use("/user", user); */
 
 // API routes
 

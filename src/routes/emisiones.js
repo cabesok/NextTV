@@ -5,14 +5,14 @@ const multer = require("multer");
 const router = express.Router();
 /* const product = require("../controllers/product"); */
 const emisionesController = require("../controllers_db/emisionesController")
-
+const authOk = require("../middlewares/authOk");
 
 // Rutas para base da datos SQL
 
  
-router.get("/emisiones", emisionesController.emisiones);
-router.get("/emisiones/crear-emision", emisionesController.crearEmision);
-router.get("/emisiones/:id", emisionesController.verEmision);
+router.get("/emisiones", authOk, emisionesController.emisiones);
+router.get("/emisiones/crear-emision", authOk, emisionesController.crearEmision);
+router.get("/emisiones/:id", authOk, emisionesController.verEmision);
 
 /* router.get("/creditos/buscar", creditosController.buscar); */
 //router.get("/creditos/edit/:id", creditosController.edit);

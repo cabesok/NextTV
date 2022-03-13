@@ -24,6 +24,14 @@ let creditosController = {
     }, */
 
     buscar: function(req, res) {
+        /* db.Products.findAll({where: {
+            category_id: 1
+        }})
+        .then(function(products) { */
+        res.render("../views/creditos/buscar.ejs", {style: "buscar.css", title: "Buscar"})
+    },
+
+    buscarCreditos: function(req, res) {
     /* db.Products.findAll({
         where: {
             name: {
@@ -41,13 +49,7 @@ let creditosController = {
         res.render("../views/creditos/emisiones.ejs", {style: "emisiones.css", title: "Emisiones", emisiones:emisiones})})
     }, */
 
-    login: function(req, res) {
-        /* db.Products.findAll({where: {
-            category_id: 1
-        }})
-        .then(function(products) { */
-        res.render("../views/creditos/login.ejs", {style: "login.css", title: "Login"})
-    },
+   
 
     /* modificarcredito: function(req, res) {
         db.Products.findAll({where: {
