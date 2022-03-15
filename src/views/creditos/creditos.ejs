@@ -14,6 +14,39 @@
     </header>
 <h1 class="dark">Créditos recientes</h1>
 
+    <div>
+        <form action="/creditos/filtrar" method="POST" >
+            <select name="programa" >
+                <!-- <option selected>Filtrar creditos</option> -->
+                <option  value="0">Todos</option>
+                <option  value="1">Informe 4</option>
+                <option value="2">Tal Cual</option>
+                <option value="3">Vivo El Jueves</option>
+            </select>
+            <button type="submit">Filtrar</button>
+        </form>
+    </div>
+
+    <!-- <form method="post" action="">
+        <div align="center"> 
+          <p> 
+            <select name="select" size="1"  
+            style="FONT-SIZE: 10px; COLOR: #000000; BACKGROUND-COLOR: rgb(255,255,255)" 
+            onChange="window.open(this.options[this.selectedIndex].value,'_blank')">
+              <option selected>Filtrar creditos</option>
+              <option value="http://www.inta.gov.ar">Instituto Nacional de Tecnología 
+              Agropecuaria</option>
+              <option value="http://www.senasa.gov.ar">SENASA</option>
+              <option value="http://siiap.sagyp.mecon.ar">Sec de Agricultura, Ganadería, 
+              Pesca y Alimentación</option>
+              <option value="http://www.afip.gov.ar">AFIP - DGI</option>
+              <option value="http://www.bcra.gov.ar">Banco Central de la R.A.</option>
+              <option value="http://www.indec.mecon.ar">INDEC</option>
+            </select>
+          </p>
+          </div>
+      </form> -->
+
 <div class="showcase-componentes"></div>
 
 

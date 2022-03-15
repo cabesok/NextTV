@@ -25,7 +25,10 @@ const upload = multer({storage: storage}); */
 
 // Rutas para base da datos SQL
 
-router.get("/creditos", authOk, creditosController.creditos); 
+router.get("/creditos", authOk, creditosController.creditos);
+/* router.get("/creditos/informe4", authOk, creditosController.creditosInforme4); 
+router.get("/creditos/talcual", authOk, creditosController.creditosTalcual); 
+router.get("/creditos/vivoeljueves", authOk, creditosController.creditosVivoeljueves); */  
 /* router.get("/creditos/crear-emision", creditosController.crearEmision); */
 router.get("/creditos/buscar", authOk, creditosController.buscar);
 /* router.get("/creditos/emisiones", creditosController.emisiones); */
@@ -40,6 +43,8 @@ router.get("/creditos/modificarcredito/:id", authOk, creditosController.modifica
 
 router.put("/creditos/actualizar/:id", creditosController.actualizar)
 router.post("/creditos/agregar", creditosController.agregar);
+router.post("/creditos/filtrar", authOk, creditosController.creditosFiltrar); 
+
 /* router.post("/creditos/nuevaemision", creditosController.nuevaEmision); */
 router.delete("/creditos/delete/:id", creditosController.delete);
 router.put("/creditos/utilizar/:id", creditosController.utilizarBack);

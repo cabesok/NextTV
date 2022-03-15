@@ -15,6 +15,53 @@ let creditosController = {
     })
     },
 
+    creditosFiltrar: function(req, res) {
+        if (req.body.programa != 0){
+            db.Creditos.findAll({
+                where: {
+                estado_id: 1,
+                programa_id: req.body.programa
+            },
+                order: [["id","DESC"]]})
+            .then(function(creditos) {
+            res.render("../views/creditos/creditos.ejs", {style: "creditos.css", title: "Créditos Recientes", creditos:creditos})
+        })} else {
+            db.Creditos.findAll({
+                where: {
+                estado_id: 1
+            },
+                order: [["id","DESC"]]})
+            .then(function(creditos) {
+            res.render("../views/creditos/creditos.ejs", {style: "creditos.css", title: "Créditos Recientes", creditos:creditos})
+        })
+        }
+    },
+
+    /* creditosTalcual: function(req, res) {
+            db.Creditos.findAll({
+                where: {
+                estado_id: 1,
+                programa_id: 2
+            },
+                order: [["id","DESC"]]})
+            .then(function(creditos) {
+            res.render("../views/creditos/creditos.ejs", {style: "creditos.css", title: "Créditos Recientes", creditos:creditos})
+        })
+    },
+
+    
+    creditosVivoeljueves: function(req, res) {
+            db.Creditos.findAll({
+                where: {
+                estado_id: 1,
+                programa_id: 3
+            },
+                order: [["id","DESC"]]})
+            .then(function(creditos) {
+            res.render("../views/creditos/creditos.ejs", {style: "creditos.css", title: "Créditos Recientes", creditos:creditos})
+        })
+    }, */
+
     /* crearEmision: function(req, res) {
         db.Products.findAll({where: {
             category_id: 1
