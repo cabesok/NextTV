@@ -32,7 +32,7 @@
                     <% for (let i = 0; i < emisiones.length; i++) { %>
         
                         <div class="container-emision">
-                        <h4 style="margin: 0px;"> <%= emisiones[i].programa %> </h4>
+                        <h4 style="margin: 0px;"> <%= emisiones[i].programa.programa %> </h4>
                             <div class="fechainput">
                                 <p style="margin: 0px;"> <%= emisiones[i].fecha %> </p>
                                 <input name="numeroEmision" value="<%= emisiones[i].id %>" type="radio" style="color:#8C8C8C" >

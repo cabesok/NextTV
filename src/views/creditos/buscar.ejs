@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include ("../partials/head") %>
+
+<body>
+
+    <div class="body2">
+
+        <%- include ("../partials/header2") %>
+    
+    <header>
+
+        <form action="/creditos/buscar" method="GET" >
+            <input type="search" name="search" placeholder="Buscar..." >
+            <button type="submit" >
+                <img src="/images/Search icon.png" class="gris-medio" alt="buscar">
+            </button>
+        </form>
+
+    </header>
+
+<h1 class="dark">Resultados de la búsqueda:</h1>
+
+
+
+   <!--  <div>
+        <form action="/creditos/filtrar" method="POST" >
+            <select name="programa" >
+                <option value="0">Todos</option>
+                <option value="1">Informe 4</option>
+                <option value="2">Tal Cual</option>
+                <option value="3">Vivo El Jueves</option>
+            </select>
+            <button type="submit">Filtrar</button>
+        </form>
+    </div> -->
+
+    
+
+<div class="showcase-componentes"></div>
+
+
+<section class="lista-creditos">
+
+    <% for (let i = 0; i < creditos.length; i++) { %>
+        
+        <article class="credito">
+
+            <div class="cabecera dark">
+                <div class="nombre"> <%= creditos[i].nombre %> </div>
+                <div class="right gris-medio"> <%=creditos[i].fecha %> </div>
+                <div class="cargo"> <%=creditos[i].cargo %> </div>
+                <div class="right"> <%=creditos[i].localidad %> </div>
+            </div>
+            <p class="descripcion gris-medio"> <%=creditos[i].descripcion %> </p>
+            
+                <div class="right"> <%=creditos[i].programa.programa %> </div>
+                
+
+                <% if (creditos[i].emision_id != null) { %>
+
+                    <div class="right" style="color:green"> <%= creditos[i].emision.fecha %> </div>
+
+                    <% } else { %> 
+
+                    <div class="right" style="color:red" > No Emitido </div>
+
+                <% } %>
+            
+                
+            
+
+        </article>
+        
+    <% } %>
+
+</section>
+
+
+
+</div>
+
+</body>
+</html>

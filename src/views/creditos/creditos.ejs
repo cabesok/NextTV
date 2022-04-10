@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include ("../partials/head") %>
+    <%- include ("../partials/head") %>
 
 <body>
 
@@ -9,17 +9,30 @@
 
     
     <header>
-        <h3 class="gris-medio">Bienvenido</h3>
-        <img src="/images/Search icon.png" class="gris-medio" alt="buscar">
+        
+        <form action="/creditos/buscar" method="GET" >
+            <input type="search" name="search" placeholder="Buscar..." >
+            <button type="submit" >
+                <img src="/images/Search icon.png" class="gris-medio" alt="buscar">
+            </button>
+        </form>
+
     </header>
+<div class="emisiones">
+    <a  href="/emisiones"> Emisiones Disponibles </a>
+</div>
 <h1 class="dark">Créditos recientes</h1>
 
-    <div>
+    <!-- <div>
+        <input type="" >
+    </div> -->
+
+    <div class="filtro" >
         <form action="/creditos/filtrar" method="POST" >
             <select name="programa" >
                 <!-- <option selected>Filtrar creditos</option> -->
-                <option  value="0">Todos</option>
-                <option  value="1">Informe 4</option>
+                <option value="0">Todos</option>
+                <option value="1">Informe 4</option>
                 <option value="2">Tal Cual</option>
                 <option value="3">Vivo El Jueves</option>
             </select>
@@ -80,9 +93,10 @@
 
 </section>
 
-<footer>
-    <a href="/creditos/nuevocredito"> <img src="/images/mas.png" alt=""> </a> 
-</footer>
+<%- include ("../partials/footer") %>
+
+
+<script src="../js/ventanamodal.js"></script>
 
 </div>
 

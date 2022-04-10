@@ -43,7 +43,8 @@ router.get("/creditos/modificarcredito/:id", authOk, creditosController.modifica
 
 router.put("/creditos/actualizar/:id", creditosController.actualizar)
 router.post("/creditos/agregar", creditosController.agregar);
-router.post("/creditos/filtrar", authOk, creditosController.creditosFiltrar); 
+router.post("/creditos/filtrar", /* authOk, */ creditosController.creditosFiltrar); 
+/* router.post("/creditos/buscar", authOk, creditosController.buscarCreditos); */
 
 /* router.post("/creditos/nuevaemision", creditosController.nuevaEmision); */
 router.delete("/creditos/delete/:id", creditosController.delete);

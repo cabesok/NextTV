@@ -59,9 +59,11 @@ let emisionesController = {
         /* db.Emisiones.findByPk(req.params.id)
         .then(function(emision) {
         res.render("../views/emisiones/verEmision.ejs", {style: "verEmision.css", title: "Emision", emision:emision})}) */
-
+        
+            
         let pedidoCreditos = db.Creditos.findAll({
-            where: {emision_id: req.params.id}});
+            where: {emision_id: req.params.id},
+            order: [["bloque","ASC"]]});
         let pedidoEmision = db.Emisiones.findByPk(req.params.id, {include:[{association:"programa"}]} );
 
         Promise.all([pedidoCreditos, pedidoEmision])

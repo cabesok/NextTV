@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes) => {
 			type: dataTypes.STRING
 		},
 		fecha: {
-			type: dataTypes.INTEGER
+			type: dataTypes.DATEONLY
 		},
 		localidad: {
 			type: dataTypes.STRING
@@ -54,7 +54,7 @@ module.exports = (sequelize, dataTypes) => {
 		Credito.belongsTo(models.Estados , {
             as: "estado",
             foreignKey: "estado_id"
-        })
+        }),
 		Credito.belongsTo(models.Programas , {
             as: "programa",
             foreignKey: "programa_id"

@@ -70,24 +70,35 @@ let creditosController = {
         res.render("../views/creditos/crear-emision.ejs", {style: "crear-emision.css", title: "Crear Emisión"})
     }, */
 
-    buscar: function(req, res) {
-        /* db.Products.findAll({where: {
+    /* buscar: function(req, res) {
+        db.Products.findAll({where: {
             category_id: 1
         }})
-        .then(function(products) { */
+        .then(function(products) {
         res.render("../views/creditos/buscar.ejs", {style: "buscar.css", title: "Buscar"})
-    },
+    }, */
 
-    buscarCreditos: function(req, res) {
-    /* db.Products.findAll({
+    buscar: function(req, res) {
+    db.Creditos.findAll({
         where: {
-            name: {
-                [Op.like]: '%' + req.query.search + '%' }
-        }
+            /* nombre: { [Op.like]: '%' + req.query.search + '%' }, */
+            [Op.or]: [
+                { descripcion: { [Op.like]: '%' + req.query.search + '%' } },
+                { nombre: { [Op.like]: '%' + req.query.search + '%' } },
+                { cargo: { [Op.like]: '%' + req.query.search + '%' } },
+                { localidad: { [Op.like]: '%' + req.query.search + '%' } }
+            ]},
+        order: [["id","DESC"]],
+        
+        include: [{ all: true }]
+        
     })
-    .then(function(products) {
-    res.render("products/buscar", {style: "buscar.css", title: "Buscar", products:products})
-    }} */
+    .then(function(creditos) {
+        console.log(creditos);
+    res.render("../views/creditos/buscar", { style: "buscar.css", title: "Resultados Búsqueda", creditos:creditos })
+    }).catch(function(err){
+        console.log(err)
+    })
     },
 
     /* emisiones: function(req, res) {
@@ -117,7 +128,10 @@ let creditosController = {
     utilizar: function(req, res) {
 
         let pedidoCredito = db.Creditos.findByPk(req.params.id);
-        let pedidoEmisiones = db.Emisiones.findAll();
+        let pedidoEmisiones = db.Emisiones.findAll({
+            where: {estado_id: 1},
+            order: [["id","DESC"]],
+            include:[{association:"programa"}]});
 
         Promise.all([pedidoCredito, pedidoEmisiones])
             .then(function([credito, emisiones]){

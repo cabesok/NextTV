@@ -60,6 +60,15 @@ color: var(--dark)
 
 }
 
+p {
+    
+/* margin-left: 24px; */
+font-weight: 900;
+font-size: 30px;
+line-height: 46px;
+color: var(--dark)
+}
+
 .campo-emision {
 
     background: #FFFFFF;
@@ -108,7 +117,7 @@ color: var(--dark)
 
 .botones i {
     margin-left: 10px;
-    font-family: 'Public Sans';
+    
 }
 
 .botones .ver {
@@ -125,6 +134,17 @@ color: var(--dark)
     font-size: 14px;
     line-height: 160%;
    
+}
+
+.botones .delete {
+    
+    background-color:#ffffff;
+border:none;
+color: #F20C36;
+/* font-weight: 500; */
+font-size: 16px;
+/* line-height: 160%; */
+/* width: 10px; */
 }
 
 .botones .modificar {

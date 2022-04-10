@@ -2,6 +2,7 @@
 <html lang="en">
     
     <%- include ("../partials/head") %>
+    
 
 <body>
     <div class="body2">
@@ -18,15 +19,17 @@
             <fieldset class="campo-emision">
                 <div class="primer-fila">
                     <h3><%= emisiones[i].programa.programa %></h3>
-                    <input name="id" type="radio" style="color:#8C8C8C" value="<%= emisiones[i].id %>" >
+                    <!-- <input name="id" type="radio" style="color:#8C8C8C" value="<%= emisiones[i].id %>" > -->
                 </div>
-                <p><%= emisiones[i].fecha %></p>
+                
+                <p> <%= emisiones[i].fecha %> </p>
+                
                 <div class="botones">
                     <a href="/emisiones/<%= emisiones[i].id %>"> <button class="ver"  >Ver Créditos</button> </a>
-                    <button class="modificar">Modificar</button>
+                    <!-- <button class="modificar">Modificar</button> -->
                     <!-- <i class="fas fa-trash-alt"></i> -->
                     <form action="/emisiones/delete/<%=emisiones[i].id %>?_method=DELETE" method="POST">
-                        <button type="submit" class="delete"><i class="fas fa-trash-alt"></i></button>
+                        <button type="submit" class="delete"> <i class="fas fa-trash-alt"></i> </button>
                     </form>
                 </div>
             </fieldset>

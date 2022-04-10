@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
 			autoIncrement: true
 		},
 		fecha: {
-			type: dataTypes.INTEGER
+			type: dataTypes.DATEONLY
 		},
 		programa_id: {
 			type: dataTypes.INTEGER

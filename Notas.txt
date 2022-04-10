@@ -14,12 +14,12 @@ EMISIONES *** (solo falta lo de las emisiones al final)
 
 FUNCIONALIDADES PARA AGREGAR:
 
-*FILTRAR CREDITOS POR PROGRAMAS (JS front o vistas?)
+//*FILTRAR CREDITOS POR PROGRAMAS (JS front o vistas?)
 *cartelistos en CREDITOS para avisar que hay emisiones SIN PUBLICAR
-*BUSQUEDA (FILTRO POR FECHA ver)
+//*BUSQUEDA (FILTRO POR FECHA ver)
 
 
-cuando NO se publique una emision y se elimine el estado de los CREDITOS pasa a sin utilizar (1)
+//cuando NO se publique una emision y se elimine el estado de los CREDITOS pasa a sin utilizar (1)
 
 
 REVISAR:
@@ -28,9 +28,10 @@ verEmision.ejs
 
 
 
+
 --- 5/3 ---
 
-hacer USER ***
+//hacer USER ***
 
 hacer VALIDACION DE DATOS  con Express-Validator
 
@@ -45,3 +46,30 @@ VER: Como FILTRAR elementos por Categorías con HTML, CSS y JS
 
 .escondido input[type=radio]{ position: absolute;left: -1000em; }
 .escondido input[type=radio]:checked + label { color: red;}
+
+
+--- 16/03 ---
+
+Falta:
+
+* el include de sequelize en buscar y agregar los datos del crédito (estado, programa, etc) en el html
+
+x* al clikear el + para agregar que aparezca ventana modal y sea para CREDITO y EMISION
+
+x* acomodar el css de todo 
+
+x* el middleware authOk solo en el app.use del index.js
+
+* ver el estilo del botón Back en buscar.ejs
+
+* Transición del input al apretar la lupa
+
+* hacer VALIDACION DE DATOS  con Express-Validator
+
+
+
+
+
+
+
+
