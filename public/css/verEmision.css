@@ -14,7 +14,7 @@
 
 }
 body {
-    /* background-color: #FAF9FE; */
+    background-color: #FAF9FE;
 }
 
 .body2 {
@@ -26,27 +26,7 @@ body {
     margin: auto;
 }
 
-header {
 
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* margin-top:20px; */
-}
-
-header img{
-    width: 16px;
-    height: 15px;
-    margin-left:24px;
-}
-header p {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
-    margin-left: 10px;
-    color:var(--gris-medio)
-}
 
 h1 {
 
@@ -93,6 +73,93 @@ color: var(--dark)
     color: #5E5656;
 
 }
+
+
+
+
+
+
+
+.lista-creditos {
+    
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    
+    .cabecera {
+        
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    }
+    
+    .cabecera div{
+        
+    width: 50%;
+    gap: 10px;
+    }
+    
+    .right{
+        text-align: right;
+    }
+    .nombre {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    }
+    .cargo {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    }
+    .localidad {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    }
+    
+    .fecha {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 160%;
+    }
+    .credito {
+        
+    display: flex;
+    flex-direction: column;
+    border-color: #8C8C8C;
+    border-bottom: 3px outset black;
+    padding-bottom: 10px;
+    }
+    
+    .descripcion {
+        
+    width: 100%;
+    margin-bottom: 10px;
+    
+    }
+
+.contenedor-orden {
+    border-left: 2px solid blue;
+}
+
+.bloque, .posicion {
+    
+    /* width: 45%; */
+    margin: 2px;
+    /* display: inline; */
+}
+
+
+
+
 
 .botones {
     
@@ -171,181 +238,3 @@ color: var(--dark)
 
 
 
-------------------------------------------------------
-
-
-body {
-    background-color: #FAF9FE;
-}
-
-.body2 {
-    min-width: 375px;
-    max-width: 450px;
-    margin: auto;
-}
-
-/* COLORES */
-.gris-medio {
-    color: #8C8C8C;
-}
-
-.dark {
-    color: #120E21;
-}
-.red {
-    color: #F20C36;
-}
-.secundaryred {
-    color: #EB3349;
-}
-.gris-claro {
-    color:#F3F3F3;
-}
-
-
-
-
-header{
-    width: 320px;
-    height: 31px;
-    margin-top: 43px;
-    margin-left:auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: space-between;
-}
-header h3{
-
-font-style: normal;
-font-weight: 900;
-font-size: 20px;
-line-height: 26px;
-}
-
-header img{
-width: 30px;
-height: 30px;
-}
-
-h1 {
-width: 330px;
-margin-top: 15px;
-margin-left: auto;
-margin-right: auto;
-font-style:normal;
-font-weight: 900;
-font-size: 35px;
-line-height: 46px;
-}
-
-.lista-creditos {
-width: 330px;
-margin-left: auto;
-margin-right: auto;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
-
-.cabecera {
-width: 330px;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-align-items: center;
-
-}
-
-.cabecera div{
-width: 50%;
-gap: 10px;
-}
-
-.right{
-    text-align: right;
-}
-.nombre {
-font-weight: bold;
-font-size: 20px;
-line-height: 26px;
-}
-.cargo {
-font-weight: bold;
-font-size: 15px;
-line-height: 20px;
-}
-.localidad {
-font-weight: bold;
-font-size: 15px;
-line-height: 20px;
-}
-
-.fecha {
-font-weight: normal;
-font-size: 12px;
-line-height: 160%;
-}
-.credito {
-display: flex;
-flex-direction: column;
-}
-
-.descripcion {
-width: 100%;
-
-}
-.botones {
-     
-width: 80%;
-margin-left: 80px;
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: center;
-}
-.principal,.secundario {
-width: 94px;
-height: 34px;
-border-radius: 4px;
-
-}
-.principal {
-background-color:#D3D4D8;
-border:none;
-color: #F20C36;
-font-weight: 500;
-font-size: 16px;
-line-height: 160%;
-}
-.secundario {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 160%;
-    color: var(--gris-medio);
-    background-color: #FAF9FE;
-border-color: #8C8C8C;
-}
-
-.delete {
-    
-    background-color:#ffffff;
-border:none;
-color: #F20C36;
-/* font-weight: 500; */
-font-size: 16px;
-/* line-height: 160%; */
-/* width: 10px; */
-}
-
-.credito {
-    margin-bottom:30px;
-    margin-top:10px;
-}
-
-footer {
-    position: fixed;
-   bottom: 30px;
-   right: 30px;
-}

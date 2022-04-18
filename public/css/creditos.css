@@ -7,20 +7,6 @@
     --secu-red:#EB3349;
 
 }
-* {
-    box-sizing: border-box;
-    font-family: 'Red Hat Display';
-
-}
-body {
-    background-color: #FAF9FE;
-}
-
-.body2 {
-    min-width: 375px;
-    max-width: 450px;
-    margin: auto;
-}
 
 /* COLORES */
 .gris-medio {
@@ -40,8 +26,21 @@ body {
     color:#F3F3F3;
 }
 
+* {
+    box-sizing: border-box;
+    font-family: 'Red Hat Display';
 
+}
 
+body {
+    background-color: #FAF9FE;
+}
+
+.body2 {
+    min-width: 375px;
+    max-width: 450px;
+    margin: auto;
+}
 
 header{
     width: 320px;
@@ -83,6 +82,7 @@ height: 30px;
     text-align: right;
     margin-top: 15px;
     margin-bottom: 15px;
+    padding-right: 25px;
     font-style: normal ;
     font-weight: 900;
     font-size: 20px;
@@ -109,7 +109,8 @@ line-height: 46px;
 }
 
 .lista-creditos {
-width: 330px;
+    
+width: 350px;
 margin-left: auto;
 margin-right: auto;
 display: flex;
@@ -118,7 +119,8 @@ justify-content: center;
 }
 
 .cabecera {
-width: 330px;
+    
+width: 350px;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
@@ -127,6 +129,7 @@ align-items: center;
 }
 
 .cabecera div{
+    
 width: 50%;
 gap: 10px;
 }
@@ -158,16 +161,20 @@ line-height: 160%;
 .credito {
 display: flex;
 flex-direction: column;
+border-color: #8C8C8C;
+border-bottom: 3px outset black;
+padding-bottom: 10px;
 }
 
 .descripcion {
 width: 100%;
+margin-bottom: 30px;
 
 }
 .botones {
      
 width: 80%;
-margin-left: 80px;
+margin-left: 50px;
 display: flex;
 flex-direction: row;
 justify-content: space-around;
@@ -212,18 +219,19 @@ font-size: 16px;
     margin-top:10px;
 }
 
-footer {
+/* footer {
     position: fixed;
    bottom: 30px;
    right: 30px;
-}
+} */
 
 
 
 /* VENTANA MODAL */
 
 .container-modal {
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
     width: 240px;
     height: 185px;
     position:fixed;
@@ -239,7 +247,8 @@ footer {
 }
 .show {
     pointer-events: auto;
-    opacity: 1;
+    /* opacity: 1; */
+    display: block;
   }
 .container-modal .close{
    position: absolute;
@@ -279,4 +288,73 @@ line-height: 160%;
     font-weight: 500;
     font-size: 18px;
     line-height: 33px;
+}
+
+
+
+
+
+
+
+@media (min-width: 764px) {
+
+    .body2 {
+        min-width: 764px;
+        max-width: 764px;
+        
+    }
+    
+    header{
+        width: 320px;
+        height: 31px;
+        margin-top: 43px;
+        margin-left:auto;
+        margin-right: auto;
+        margin-bottom: 35px;
+    }
+
+    .lista-creditos {
+    
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        }
+    
+    .credito {
+        border-color: #8C8C8C;
+        border-bottom: 3px outset black;
+        padding-bottom: 10px;
+    }
+
+    .cabecera {
+            
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        
+        }
+        
+        .descripcion {
+            width: 100%;
+            margin-bottom: 30px;
+            
+            }
+        .botones {
+                 
+            width: 300px;
+            margin-left: 180px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            
+            }
+        
+            
+            
 }

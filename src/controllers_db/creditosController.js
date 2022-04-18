@@ -37,47 +37,6 @@ let creditosController = {
         }
     },
 
-    /* creditosTalcual: function(req, res) {
-            db.Creditos.findAll({
-                where: {
-                estado_id: 1,
-                programa_id: 2
-            },
-                order: [["id","DESC"]]})
-            .then(function(creditos) {
-            res.render("../views/creditos/creditos.ejs", {style: "creditos.css", title: "Créditos Recientes", creditos:creditos})
-        })
-    },
-
-    
-    creditosVivoeljueves: function(req, res) {
-            db.Creditos.findAll({
-                where: {
-                estado_id: 1,
-                programa_id: 3
-            },
-                order: [["id","DESC"]]})
-            .then(function(creditos) {
-            res.render("../views/creditos/creditos.ejs", {style: "creditos.css", title: "Créditos Recientes", creditos:creditos})
-        })
-    }, */
-
-    /* crearEmision: function(req, res) {
-        db.Products.findAll({where: {
-            category_id: 1
-        }})
-        .then(function(products) {
-        res.render("../views/creditos/crear-emision.ejs", {style: "crear-emision.css", title: "Crear Emisión"})
-    }, */
-
-    /* buscar: function(req, res) {
-        db.Products.findAll({where: {
-            category_id: 1
-        }})
-        .then(function(products) {
-        res.render("../views/creditos/buscar.ejs", {style: "buscar.css", title: "Buscar"})
-    }, */
-
     buscar: function(req, res) {
     db.Creditos.findAll({
         where: {
@@ -101,27 +60,8 @@ let creditosController = {
     })
     },
 
-    /* emisiones: function(req, res) {
-        db.Emisiones.findAll()
-        .then(function(emisiones) {
-        res.render("../views/creditos/emisiones.ejs", {style: "emisiones.css", title: "Emisiones", emisiones:emisiones})})
-    }, */
-
-   
-
-    /* modificarcredito: function(req, res) {
-        db.Products.findAll({where: {
-            category_id: 1
-        }})
-        .then(function(products) {
-        res.render("../views/creditos/modificarcredito.ejs", {style: "modificarcredito.css", title: "Modificar Credito"})
-    }, */
-
     nuevocredito: function(req, res) {
-        /* db.Products.findAll({where: {
-            category_id: 1
-        }})
-        .then(function(products) { */
+        
         res.render("../views/creditos/nuevocredito.ejs", {style: "nuevocredito.css", title: "Nuevo Crédito"})
     },
 
@@ -165,10 +105,13 @@ let creditosController = {
             estado_id: 1,
             programa_id: req.body.programa
             
-        })
+        }).then(function(){
+            res.redirect("/creditos");
+            })
+        
         
         /* console.log(req.body); */
-        res.redirect("/creditos");
+        
         /* res.send(req.body); */
     },
 
@@ -177,8 +120,10 @@ let creditosController = {
             where: {
                 id: req.params.id
             }
-        })
-        res.redirect("/creditos")
+        }).then(function(){
+            res.redirect("/creditos");
+            })
+        
     },
 
     modificarcredito: function(req, res) {

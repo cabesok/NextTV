@@ -7,20 +7,6 @@
     --secu-red:#EB3349;
 
 }
-* {
-    box-sizing: border-box;
-    font-family: 'Red Hat Display';
-
-}
-body {
-    background-color: #FAF9FE;
-}
-
-.body2 {
-    min-width: 375px;
-    max-width: 450px;
-    margin: auto;
-}
 
 /* COLORES */
 .gris-medio {
@@ -40,7 +26,20 @@ body {
     color:#F3F3F3;
 }
 
+* {
+    box-sizing: border-box;
+    font-family: 'Red Hat Display';
 
+}
+body {
+    background-color: #FAF9FE;
+}
+
+.body2 {
+    min-width: 375px;
+    max-width: 450px;
+    margin: auto;
+}
 
 
 header{
@@ -79,7 +78,7 @@ margin-left: auto;
 margin-right: auto;
 font-style:normal;
 font-weight: 900;
-font-size: 35px;
+font-size: 24px;
 line-height: 46px;
 }
 
@@ -138,62 +137,93 @@ line-height: 160%;
 .credito {
 display: flex;
 flex-direction: column;
+margin-bottom:30px;
+margin-top:10px;
+border-color: #8C8C8C;
+border-bottom: 3px outset black;
+padding-bottom: 10px;
 }
 
 .descripcion {
 width: 100%;
 
 }
-.botones {
-     
-width: 80%;
-margin-left: 80px;
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: center;
-}
-.principal,.secundario {
-width: 94px;
-height: 34px;
-border-radius: 4px;
 
-}
-.principal {
-background-color:#D3D4D8;
-border:none;
-color: #F20C36;
-font-weight: 500;
-font-size: 16px;
-line-height: 160%;
-}
-.secundario {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 160%;
-    color: var(--gris-medio);
-    background-color: #FAF9FE;
-border-color: #8C8C8C;
-}
-
-.delete {
-    
-    background-color:#ffffff;
-border:none;
-color: #F20C36;
-/* font-weight: 500; */
-font-size: 16px;
-/* line-height: 160%; */
-/* width: 10px; */
-}
-
-.credito {
-    margin-bottom:30px;
-    margin-top:10px;
-}
 
 footer {
     position: fixed;
    bottom: 30px;
    right: 30px;
+}
+
+
+
+
+
+
+@media (min-width: 764px) {
+
+    .body2 {
+        min-width: 764px;
+        max-width: 764px;
+        
+    }
+    
+    header{
+        width: 320px;
+        height: 31px;
+        margin-top: 30px;
+        margin-left:auto;
+        margin-right: auto;
+        margin-bottom: 35px;
+    }
+
+    h1 {
+        
+        width: 500px;
+        margin-top: 55px;
+        margin-bottom: 55px;
+        margin-left: auto;
+        margin-right: auto;
+        font-style:normal;
+        font-weight: 900;
+        font-size: 35px;
+        
+        }
+
+    .lista-creditos {
+    
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        }
+    
+    .credito {
+        border-color: #8C8C8C;
+        border-bottom: 3px outset black;
+        padding-bottom: 10px;
+    }
+
+    .cabecera {
+            
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        
+        }
+        
+        .descripcion {
+            width: 100%;
+            margin-bottom: 30px;
+            
+            }
+        
+        
+            
+            
 }

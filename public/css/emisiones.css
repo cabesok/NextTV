@@ -14,7 +14,7 @@
 
 }
 body {
-    /* background-color: #FAF9FE; */
+    background-color: #FAF9FE;
 }
 
 .body2 {
@@ -23,30 +23,11 @@ body {
     background-color: #FAF9FE;
     min-width: 375px;
     max-width: 375px;
+    min-height: 600px;
     margin: auto;
 }
 
-header {
 
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* margin-top:20px; */
-}
-
-header img{
-    width: 16px;
-    height: 15px;
-    margin-left:24px;
-}
-header p {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
-    margin-left: 10px;
-    color:var(--gris-medio)
-}
 
 h1 {
 
@@ -165,6 +146,9 @@ font-size: 16px;
 }
 
 .publicar {
+
+    
+
     display: block;
     width: 263px;
     height: 54px;
